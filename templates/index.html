@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Juego de numeros genial</title>
+    </head>
+    <body>
+        <div class="inicio">
+            <h1>Bienvenido a el Juego de números Genial!</h1>
+            <p>Estoy pensando en un numero entre el 1 y el 100</p>
+            <p>Trata de Adivinarlo!</p>
+        </div>
+        <div class="juego_container">
+            <div class="juego">
+                <h1 id="signo_interrogacion">{{mensaje}} </h1>
+                
+            </div>
+        </div>
+        <div class="respuesta">
+            <form method="POST" action="/respuesta">
+                <input type="number" id="numero" name="numero_respuesta">
+                <button>JUGAR!</button>
+            </form>
+        </div>
+    </body>
+</html>
