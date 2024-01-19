@@ -7,7 +7,7 @@ numero_secreto = random.randint(0,100)
 
 
 
-@app.route('/jugar')         
+@app.route('/')         
 def index():
     if 'numero_secreto' not in session:
             session['numero_secreto'] = random.randint(1, 100)
